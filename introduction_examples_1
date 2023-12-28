@@ -1,0 +1,81 @@
+
+1.High-level language:
+     1.1. Abstraction:
+			 Example:
+			     # High-level abstraction: Calculating the average of a list of numbers
+                 # Input
+                    numbers = [10, 20, 30, 40, 50]
+
+                 # Calculating average
+                 average = sum(numbers) / len(numbers)
+
+                 # Output
+                 print("The average is:", average)
+				 
+				 Result:
+				 The average is: 30.0
+2.Python's Versatility:
+	2.1.Web Development: Frameworks like Django and Flask facilitate building web applications.
+	Example:
+     Using Flask for a Simple Web Application:
+	 from flask import Flask
+	app = Flask(__name__)
+
+	@app.route('/')
+	def hello():
+		return 'Hello, this is a Flask web app!'
+
+	if __name__ == '__main__':
+		app.run(debug=True)
+  
+
+	2.2.Data Science and Analytics: Libraries like Pandas, NumPy, and Matplotlib support data manipulation, analysis, and visualization.
+  Example:	
+  import pandas as pd
+	import matplotlib.pyplot as plt
+	# Creating a DataFrame
+	data = {'Name': ['Alice', 'Bob', 'Charlie'],
+			'Age': [25, 30, 35],
+			'City': ['New York', 'San Francisco', 'Los Angeles']}
+
+	df = pd.DataFrame(data)
+
+	# Displaying basic statistics of the data
+	print(df.describe())
+
+	# Plotting the data
+	df.plot(kind='bar', x='Name', y='Age')
+
+	plt.show()
+
+	
+	2.3.Machine Learning and AI: TensorFlow, PyTorch, and scikit-learn provide tools for creating machine learning models.
+	Example:
+  import tensorflow as tf
+	from tensorflow.keras import layers
+	# Creating a simple neural network model
+	model = tf.keras.Sequential([layers.Dense(64, activation='relu', input_shape=(10,)),layers.Dense(64, activation='relu'),layers.Dense(1)])
+
+	# Compiling the model
+	model.compile(optimizer='adam', loss='mean_squared_error')
+
+	# Training the model (using dummy data for illustration)
+	import numpy as np
+	data = np.random.random((1000, 10))
+	labels = np.random.random((1000, 1))
+	model.fit(data, labels, epochs=10, batch_size=32)
+
+	2.4.Scripting and Automation: Python's readability and simplicity make it an excellent choice for scripting and automating tasks.
+	Example:
+    import os
+    import shutil
+
+     # Listing files in a directory
+     files = os.listdir("/opt/python_workspace/apps/")
+
+    # Copying selected files to a destination folder
+    for file in files:
+        if file.endswith('.txt'):
+            shutil.copy(os.path.join("/opt/python_workspace/apps/", file), "/opt/python_workspace/apps/destination_folder/")
+
+
